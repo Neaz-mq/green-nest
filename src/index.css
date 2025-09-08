@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply font-sans text-gray-800 bg-white;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+::selection {
+  background: #1C7C54;
+  color: white;
+}
