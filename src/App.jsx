@@ -15,7 +15,7 @@ export default function App() {
         <div>
           <Top/>
           <Navbar />
-          <main className="pt-20">
+          <main>
             {/* Sections will go here (Hero, About, Services, etc.) */}
             <Hero />
           </main>

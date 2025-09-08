@@ -3,7 +3,7 @@ import { Search, ShoppingCart } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-green-100 pb-8  ">
+    <nav className="w-full bg-green-50 pb-8  ">
       <div className="max-w-7xl mx-auto flex items-center bg-white  justify-between px-6 py-4 border-2 border-white  rounded-2xl ">
         {/* Logo */}
         <a href="#">
