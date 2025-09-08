@@ -4,7 +4,7 @@ import { MapPin, Mail, Facebook, Twitter, Instagram } from "lucide-react";
 const Top = () => {
   return (
     <div className="w-full bg-green-100 text-green-900 text-sm">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-2">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-8 py-6 ">
         {/* Left side: Address & Email */}
         <div className="flex gap-6 items-center">
           <div className="flex items-center gap-2">
