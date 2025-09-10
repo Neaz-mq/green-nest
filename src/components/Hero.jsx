@@ -8,17 +8,17 @@ const Hero = () => {
       <img 
         src="/leaf.png" 
         alt="Leaf decoration" 
-        className="absolute bottom-40 left-[-40px] w-36 md:w-52 opacity-90 pointer-events-none z-0"
+        className="absolute md:bottom-40 bottom-0 left-[-40px] w-36 md:w-52 opacity-90 pointer-events-none z-0"
       />
 
-      <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center justify-between">
+      <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center justify-between md:mt-0 mt-6">
         
         {/* Left Content with Radial Background */}
         <div className="relative md:w-1/2 text-center md:text-left z-10">
           {/* Background Glow */}
-          <div className="absolute inset-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] bg-green-200 opacity-30 rounded-full blur-3xl -left-20 -top-20 pointer-events-none z-0"></div>
+          <div className="absolute inset-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] md:bg-green-200 bg-green-50 opacity-30 rounded-full blur-3xl -left-20 -top-20 pointer-events-none z-0"></div>
 
-          <div className="relative z-10">
+          <div className="relative">
             <p className="text-green-700 font-semibold tracking-widest uppercase text-sm mb-4">
               Markets & Resources
             </p>
@@ -39,16 +39,16 @@ const Hero = () => {
         {/* Right Image with Background Shapes */}
         <div className="relative md:w-1/2 mt-10 md:mt-0 flex justify-center z-10">
           {/* Background Shape 1 */}
-          <div className="absolute w-[300px] h-[300px] bg-green-200 rounded-full rotate-[60deg] -z-10 bottom-36 right-[40px]"></div>
+          <div className="absolute md:w-[300px] md:h-[300px] w-[250px] h-[250px] bg-green-200 rounded-full rotate-[60deg] -z-10 bottom-36 md:right-[40px] right-[20px] "></div>
 
           {/* Background Shape 2 */}
-          <div className="absolute w-[200px] h-[200px] bg-green-300 rounded-full rotate-[30deg] -z-10 bottom-48 right-[80px]"></div>
+          <div className="absolute md:w-[200px] md:h-[200px] w-[180px] h-[180px] bg-green-300 rounded-full rotate-[30deg] -z-10 md:bottom-48 bottom-44 md:right-[80px] right-[40px]"></div>
 
           {/* Bottom Right Leaf Image */}
           <img 
             src="/leaf1.png"
             alt="Decorative Leaf"
-            className="absolute bottom-[-30px] right-[-20px]  w-32 md:w-48 opacity-70 pointer-events-none z-0"
+            className="absolute bottom-[-30px] md:right-[-80px] right-[-60px]  w-32 md:w-48 opacity-70 pointer-events-none z-0"
           />
 
           {/* Gardener Image */}
