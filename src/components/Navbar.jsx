@@ -13,14 +13,14 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="Logo" className="w-8 h-8" />
             <div>
-              <h1 className="text-xl font-bold text-green-800">Green</h1>
-              <p className="text-xl text-green-600 -mt-1">Nest</p>
+              <h1 className="text-xl font-bold text-green-800 leading-none">Green</h1>
+              <p className="text-xl text-green-600  leading-none">Nest</p>
             </div>
           </div>
         </a>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 font-medium text-gray-800">
+        {/* Desktop Menu (only visible on lg and up) */}
+        <ul className="hidden lg:flex gap-8 font-medium text-gray-800">
           <li className="relative">
             <a
               href="#"
@@ -36,8 +36,8 @@ const Navbar = () => {
           <li><a href="#" className="hover:text-green-600">Contact</a></li>
         </ul>
 
-        {/* Right side */}
-        <div className="hidden md:flex items-center gap-4">
+        {/* Right side (desktop only) */}
+        <div className="hidden lg:flex items-center gap-4">
           <button className="p-2 rounded-full hover:bg-gray-100">
             <Search size={18} className="text-green-600" />
           </button>
@@ -52,18 +52,18 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile/Tablet Hamburger */}
         <button
-          className="md:hidden p-2 rounded-md hover:bg-gray-100"
+          className="lg:hidden p-2 rounded-md hover:bg-gray-100"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile/Tablet Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white rounded-xl shadow-md mx-4 mt-2 py-4 px-6 flex flex-col gap-4">
+        <div className="lg:hidden bg-white rounded-xl shadow-md mx-4 mt-2 py-4 px-6 flex flex-col gap-4">
           <ul className="flex flex-col gap-3 font-medium text-gray-800">
             <li>
               <a href="#" className="text-green-600 font-semibold">Home</a>
@@ -75,7 +75,7 @@ const Navbar = () => {
             <li><a href="#" className="hover:text-green-600">Contact</a></li>
           </ul>
 
-          {/* Mobile Icons & Button */}
+          {/* Mobile/Tablet Icons & Button */}
           <div className="flex items-center gap-4 mt-4">
             <button className="p-2 rounded-full hover:bg-gray-100">
               <Search size={18} className="text-green-600" />
