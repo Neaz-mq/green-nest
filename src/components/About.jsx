@@ -24,7 +24,7 @@ const About = () => {
             if (start === end) {
               clearInterval(timer);
             }
-          }, stepTime);
+          }, stepTime); 
         }
       },
       { threshold: 0.5 } // Starts when 50% of badge is visible
