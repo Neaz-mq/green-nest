@@ -27,16 +27,18 @@ const About = () => {
           }, stepTime);
         }
       },
-      { threshold: 0.5 } // starts when 50% of badge is visible
+      { threshold: 0.5 } // Starts when 50% of badge is visible
     );
 
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
+    const currentRef = counterRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (counterRef.current) {
-        observer.unobserve(counterRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [hasStarted]);
@@ -82,7 +84,7 @@ const About = () => {
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 leading-tight">
           The Best Choice For <br /> your Business.
         </h2>
-       
+
         <p className="text-gray-600 mb-8">
           Our team ensures every garden is tailored to your lifestyle — whether
           you're seeking tranquility, productivity, or visual impact.
@@ -118,7 +120,6 @@ const About = () => {
         </div>
 
         {/* Box image and CTA */}
-
         <div className="flex items-center gap-10 flex-wrap ">
           <button className="bg-green-600 text-white px-6 py-3 rounded font-semibold hover:bg-green-700 transition duration-300">
             Get A Quote
