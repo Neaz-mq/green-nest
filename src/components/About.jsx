@@ -58,7 +58,7 @@ const About = () => {
             />
           </div>
 
-          {/* Circle overlay */}
+         
           <div className="absolute md:-top-16 -top-8 right-0 md:w-24 md:h-24 w-16 h-16 border-8 border-green-600 rounded-full z-20 "></div>
 
           {/* Experience Badge with counter */}
