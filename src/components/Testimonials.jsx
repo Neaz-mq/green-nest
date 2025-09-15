@@ -8,7 +8,7 @@ const Testimonials = () => {
                     <h3 className="text-sm font-medium tracking-[2px] text-[#97d498] uppercase mb-2">CLIENT TESTIMONIALS</h3>
                     <h2 className="text-4xl font-semibold text-[#2b392b]">What our clients say</h2>
                 </div>
-                <div className="flex flex-wrap justify-center md:gap-14 gap-32 md:mt-16 mt-24">
+                <div className="flex flex-wrap justify-center 2xl:gap-8 xl:gap-8 lg:gap-16  gap-32 md:mt-20 mt-24">
                     {/* Testimonial Card 1 */}
                     <div className="relative p-8 pt-16 bg-[#e9f5e9] rounded-xl shadow-md border border-transparent w-[350px]">
                         <img src="https://res.cloudinary.com/dxohwanal/image/upload/v1757925789/staff-box1_xyl6fu.jpg" alt="Eugene Freeman" className="absolute top-[-45px] left-1/2 transform -translate-x-1/2 w-[90px] h-[90px] rounded-full border-4 border-[#89c58a] shadow-lg" />
