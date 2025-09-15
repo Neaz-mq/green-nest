@@ -3,13 +3,13 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Team = () => {
   return (
-    <div className="font-sans text-gray-800">
+    <div className="font-sans text-gray-800 md:py-28 py-10">
       {/* Header with Dark Background */}
       <div className="relative bg-[#0d3a2f] bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1757915775/imgheader.b35642c0_xqqzjh.jpg')] bg-cover bg-center text-white py-20 text-center">
-        <p className="uppercase tracking-widest text-sm text-white/70 mb-2">
+        <p className="uppercase tracking-widest text-sm text-gray-600 mb-2 font-semibold">
           Meet Our Team
         </p>
-        <h2 className="text-3xl font-bold">Our Creative Team</h2>
+        <h2 className="text-3xl font-bold text-gray-700">Our Creative Team</h2>
 
         {/* Team Member Cards */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
