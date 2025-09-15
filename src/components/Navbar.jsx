@@ -29,10 +29,10 @@ const Navbar = () => {
               Home
             </a>
           </li>
-          <li><a href="#" className="hover:text-green-600">About</a></li>
           <li><a href="#" className="hover:text-green-600">Services</a></li>
-          <li><a href="#" className="hover:text-green-600">Case</a></li>
-          <li><a href="#" className="hover:text-green-600">Blog</a></li>
+          <li><a href="#" className="hover:text-green-600">About</a></li>
+          <li><a href="#" className="hover:text-green-600">Team</a></li>
+          <li><a href="#" className="hover:text-green-600">Subscribe</a></li>
           <li><a href="#" className="hover:text-green-600">Contact</a></li>
         </ul>
 
@@ -68,10 +68,10 @@ const Navbar = () => {
             <li>
               <a href="#" className="text-green-600 font-semibold">Home</a>
             </li>
-            <li><a href="#" className="hover:text-green-600">About</a></li>
             <li><a href="#" className="hover:text-green-600">Services</a></li>
-            <li><a href="#" className="hover:text-green-600">Case</a></li>
-            <li><a href="#" className="hover:text-green-600">Blog</a></li>
+            <li><a href="#" className="hover:text-green-600">About</a></li>
+            <li><a href="#" className="hover:text-green-600">Team</a></li>
+            <li><a href="#" className="hover:text-green-600">Subscribe</a></li>
             <li><a href="#" className="hover:text-green-600">Contact</a></li>
           </ul>
 
