@@ -7,6 +7,8 @@ import Hero from "./components/Hero";
 import Landscaping from "./components/Landscaping";
 import About from "./components/About";
 import Team from "./components/Team";
+import Subscribe from "./components/Subscribe";
+import Testimonials from "./components/Testimonials";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -24,6 +26,8 @@ export default function App() {
             <Landscaping />
             <About />
             <Team />
+            <Testimonials />
+            {/* <Subscribe /> */}
           </main>
           <Footer />
         </div>

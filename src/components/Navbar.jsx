@@ -32,6 +32,7 @@ const Navbar = () => {
           <li><a href="#" className="hover:text-green-600">Services</a></li>
           <li><a href="#" className="hover:text-green-600">About</a></li>
           <li><a href="#" className="hover:text-green-600">Team</a></li>
+             <li><a href="#" className="hover:text-green-600">Testimonials</a></li>
           <li><a href="#" className="hover:text-green-600">Subscribe</a></li>
           <li><a href="#" className="hover:text-green-600">Contact</a></li>
         </ul>
@@ -71,6 +72,7 @@ const Navbar = () => {
             <li><a href="#" className="hover:text-green-600">Services</a></li>
             <li><a href="#" className="hover:text-green-600">About</a></li>
             <li><a href="#" className="hover:text-green-600">Team</a></li>
+              <li><a href="#" className="hover:text-green-600">Testimonials</a></li>
             <li><a href="#" className="hover:text-green-600">Subscribe</a></li>
             <li><a href="#" className="hover:text-green-600">Contact</a></li>
           </ul>
