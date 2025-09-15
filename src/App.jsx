@@ -6,6 +6,7 @@ import Top from "./components/Top";
 import Hero from "./components/Hero";
 import Landscaping from "./components/Landscaping";
 import About from "./components/About";
+import Team from "./components/Team";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -22,6 +23,7 @@ export default function App() {
             <Hero />
             <Landscaping />
             <About />
+            <Team />
           </main>
           <Footer />
         </div>
