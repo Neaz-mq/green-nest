@@ -27,7 +27,7 @@ export default function App() {
             <About />
             <Team />
             <Testimonials />
-            {/* <Subscribe /> */}
+            <Subscribe />
           </main>
           <Footer />
         </div>
