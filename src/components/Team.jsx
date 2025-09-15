@@ -19,7 +19,7 @@ const Team = () => {
               className="w-24 h-24 rounded-full object-cover"
               src="https://res.cloudinary.com/dxohwanal/image/upload/v1757915040/staff1_xbploq.png"
               alt="Jessica Morales"
-            />
+            /> 
             <h3 className="mt-4 text-lg font-semibold text-gray-900">
               Jessica Morales
             </h3>
