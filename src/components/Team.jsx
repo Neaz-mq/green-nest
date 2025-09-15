@@ -99,7 +99,7 @@ const Team = () => {
         <div className="relative h-96">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1757916247/woman-plant-the-tree.3848fc18_pmwasm.jpg"
-            alt="Person repotting a plant"
+            alt="Person reporting a plant"
             className="h-full w-full object-cover rounded-lg"
           />
         </div>
