@@ -1,47 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 
 const Hero = () => {
-  const heroRef = useRef(null);
   const leafRef = useRef(null);
   const leaf1Ref = useRef(null);
-  const gardenerRef = useRef(null);
   const shape1Ref = useRef(null);
   const shape2Ref = useRef(null);
-  const textRef = useRef([]);
-  const buttonsRef = useRef([]);
+  const gardenerRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Text Animation - fast & snappy
-      gsap.from(textRef.current, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: "power3.out",
-        stagger: 0.2,
-      });
-
-      // Buttons - quick pop
-      gsap.from(buttonsRef.current, {
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.8,
-        ease: "back.out(1.5)",
-        stagger: 0.2,
-        delay: 0.6,
-      });
-
-      // Gardener - slide in fast
-      gsap.from(gardenerRef.current, {
-        x: 150,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        delay: 0.3,
-      });
-
-      // Leaf Bottom Left - faster float
+      // Leaf Bottom Left - float
       gsap.to(leafRef.current, {
         y: -25,
         repeat: -1,
@@ -50,7 +19,7 @@ const Hero = () => {
         ease: "sine.inOut",
       });
 
-      // Leaf Bottom Right - faster float
+      // Leaf Bottom Right - float
       gsap.to(leaf1Ref.current, {
         y: -20,
         repeat: -1,
@@ -59,7 +28,15 @@ const Hero = () => {
         ease: "sine.inOut",
       });
 
-      // Background shapes - faster subtle parallax
+      // Gardener - slide in from right
+      gsap.from(gardenerRef.current, {
+        x: 150,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+      });
+
+      // Background shapes - subtle parallax
       gsap.to(shape1Ref.current, {
         y: -20,
         rotation: 8,
@@ -77,16 +54,14 @@ const Hero = () => {
         duration: 5,
         ease: "sine.inOut",
       });
-    }, heroRef);
+    });
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div
-      ref={heroRef}
-      className="relative bg-green-50 flex items-center justify-center px-6 overflow-hidden"
-    >
+    <div className="relative bg-green-50 flex items-center justify-center px-6 overflow-hidden">
+      {/* Leaf Image - Bottom Left Corner */}
       <img
         ref={leafRef}
         src="/leaf.png"
@@ -95,39 +70,30 @@ const Hero = () => {
       />
 
       <div className="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center justify-between md:mt-0 mt-6">
+        {/* Left Content - static, no animation */}
         <div className="relative md:w-1/2 text-center md:text-left z-10">
+          {/* Background Glow */}
           <div className="absolute inset-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] md:bg-green-200 bg-green-50 opacity-30 rounded-full blur-3xl -left-20 -top-20 pointer-events-none z-0"></div>
 
           <div className="relative">
-            <p
-              ref={(el) => (textRef.current[0] = el)}
-              className="text-green-700 font-semibold tracking-widest uppercase text-sm mb-4"
-            >
+            <p className="text-green-700 font-semibold tracking-widest uppercase text-sm mb-4">
               Markets & Resources
             </p>
-            <h1
-              ref={(el) => (textRef.current[1] = el)}
-              className="text-4xl md:text-6xl font-semibold text-green-900 mb-8"
-            >
+            <h1 className="text-4xl md:text-6xl font-semibold text-green-900 mb-8">
               Planting a garden is <br /> similar to believe in <br /> tomorrow
             </h1>
-            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mt-4">
-              <button
-                ref={(el) => (buttonsRef.current[0] = el)}
-                className="bg-green-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-800 transition"
-              >
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+              <button className="bg-green-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-green-800 transition">
                 Get A Quote
               </button>
-              <button
-                ref={(el) => (buttonsRef.current[1] = el)}
-                className="border border-green-700 text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-green-100 transition"
-              >
+              <button className="border border-green-700 text-green-700 px-6 py-3 rounded-md font-semibold hover:bg-green-100 transition">
                 Read More
               </button>
             </div>
           </div>
         </div>
 
+        {/* Right Image with Background Shapes */}
         <div className="relative md:w-1/2 mt-10 md:mt-0 flex justify-center z-10">
           <div
             ref={shape1Ref}

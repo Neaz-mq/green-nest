@@ -82,7 +82,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown */}
       {isOpen && (
-        <div className="lg:hidden bg-white rounded-xl shadow-md mx-4 mt-2 py-4 px-6 flex flex-col gap-4">
+        <div className="lg:hidden bg-white rounded-xl shadow-md mx-4 py-4 px-6 flex flex-col gap-4">
           <ul className="flex flex-col gap-3 font-medium text-gray-800">
             {menuItems.map((item) => (
               <li key={item.id}>
