@@ -12,6 +12,8 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollProgress from "./components/ScrollProgress";
+import SimpleChat from "./components/SimpleChat";
+
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -35,6 +37,8 @@ export default function App() {
           </main>
           <Footer />
           <ScrollToTop /> {/* Arrow button */}
+          <SimpleChat />
+          
         </div>
       )}
     </>
