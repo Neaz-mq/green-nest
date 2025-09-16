@@ -9,6 +9,7 @@ import About from "./components/About";
 import Team from "./components/Team";
 import Subscribe from "./components/Subscribe";
 import Testimonials from "./components/Testimonials";
+import Contact from "./components/Contact";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,7 @@ export default function App() {
             <Team />
             <Testimonials />
             <Subscribe />
+            <Contact />
           </main>
           <Footer />
         </div>
