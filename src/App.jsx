@@ -10,6 +10,8 @@ import Team from "./components/Team";
 import Subscribe from "./components/Subscribe";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import ScrollToTop from "./components/ScrollToTop";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +20,8 @@ export default function App() {
     <>
       {loading && <Loader setLoading={setLoading} />}
       {!loading && (
-        <div>
+        <div className="relative">
+          <ScrollProgress /> {/* Scroll % bar */}
           <Top />
           <Navbar />
           <main>
@@ -31,6 +34,7 @@ export default function App() {
             <Contact />
           </main>
           <Footer />
+          <ScrollToTop /> {/* Arrow button */}
         </div>
       )}
     </>
