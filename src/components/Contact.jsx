@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center py-8 px-4 md:px-8 lg:px-16 ">
+    <div  id="contact" className="flex flex-col lg:flex-row justify-center items-center py-8 px-4 md:px-8 lg:px-16 scroll-smooth">
       {/* Left Info */}
       <div className="flex-1 p-6 md:p-10 lg:p-16 flex flex-col justify-center items-center lg:items-start max-w-lg">
         <div className="text-left w-full mb-8">

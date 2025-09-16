@@ -3,7 +3,7 @@ import { Check } from "lucide-react"; // for check icons
 
 const Subscribe = () => {
   return (
-    <div className="md:py-28 py-10 text-gray-800">
+    <div id="subscribe" className="md:py-28 py-10 text-gray-800 scroll-smooth">
       {/* About Us Section */}
       <div className="grid grid-cols-1 2xl:grid-cols-2 xl:grid-cols-2  ">
         {/* Left Image with dark overlay */}

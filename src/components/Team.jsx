@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const Team = () => {
   return (
-    <div className="font-sans text-gray-800 md:py-28 py-10">
+    <div id="team" className="text-gray-800 md:py-28 py-10 scroll-smooth">
       {/* Header with Dark Background */}
       <div className="relative bg-[#0d3a2f] bg-[url('https://res.cloudinary.com/dxohwanal/image/upload/v1757915775/imgheader.b35642c0_xqqzjh.jpg')] bg-cover bg-center text-white py-20 text-center">
         <p className="uppercase tracking-widest text-sm text-gray-600 mb-2 font-semibold">

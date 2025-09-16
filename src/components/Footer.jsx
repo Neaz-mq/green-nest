@@ -116,12 +116,12 @@ const Footer = () => {
             </li>
             <li>
               <a href="#" className="hover:text-[#97d498]">
-                UI/UX Designing
+                Website Design
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-[#97d498]">
-                Maek Elements
+                UI/UX Designing
               </a>
             </li>
             <li>

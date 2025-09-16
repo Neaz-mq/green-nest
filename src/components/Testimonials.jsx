@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () => {
     return (
-        <section className="md:py-28 py-10 text-center ">
+        <section id="testimonials" className="md:py-28 py-10 text-center scroll-smooth">
             <div className="container mx-auto px-4">
                 <div className="mb-12">
                     <h3 className="text-sm font-medium tracking-[2px] text-[#97d498] uppercase mb-2">CLIENT TESTIMONIALS</h3>

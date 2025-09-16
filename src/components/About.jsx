@@ -46,7 +46,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className="md:py-28 py-10 px-4 sm:px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-10 bg-white max-w-7xl mx-auto"
+      className="md:py-28 py-10 px-4 sm:px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-10 bg-white max-w-7xl mx-auto scroll-smooth"
     >
       {/* Left Side - Image with overlay */}
       <div className="relative w-full lg:w-1/2 flex justify-center">

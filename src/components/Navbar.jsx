@@ -13,7 +13,9 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="Logo" className="w-8 h-8" />
             <div>
-              <h1 className="text-xl font-bold text-green-800 leading-none">Green</h1>
+              <h1 className="text-xl font-bold text-green-800 leading-none">
+                Green
+              </h1>
               <p className="text-xl text-green-600  leading-none">Nest</p>
             </div>
           </div>
@@ -29,12 +31,36 @@ const Navbar = () => {
               Home
             </a>
           </li>
-          <li><a href="#" className="hover:text-green-600">Services</a></li>
-          <li><a href="#" className="hover:text-green-600">About</a></li>
-          <li><a href="#" className="hover:text-green-600">Team</a></li>
-             <li><a href="#" className="hover:text-green-600">Testimonials</a></li>
-          <li><a href="#" className="hover:text-green-600">Subscribe</a></li>
-          <li><a href="#" className="hover:text-green-600">Contact</a></li>
+          <li>
+            <a href="#services" className="hover:text-green-600">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#about" className="hover:text-green-600">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#team" className="hover:text-green-600">
+              Team
+            </a>
+          </li>
+          <li>
+            <a href="#testimonials" className="hover:text-green-600">
+              Testimonials
+            </a>
+          </li>
+          <li>
+            <a href="#subscribe" className="hover:text-green-600">
+              Subscribe
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:text-green-600">
+              Contact
+            </a>
+          </li>
         </ul>
 
         {/* Right side (desktop only) */}
@@ -67,14 +93,40 @@ const Navbar = () => {
         <div className="lg:hidden bg-white rounded-xl shadow-md mx-4 mt-2 py-4 px-6 flex flex-col gap-4">
           <ul className="flex flex-col gap-3 font-medium text-gray-800">
             <li>
-              <a href="#" className="text-green-600 font-semibold">Home</a>
+              <a href="#" className="text-green-600 font-semibold">
+                Home
+              </a>
             </li>
-            <li><a href="#" className="hover:text-green-600">Services</a></li>
-            <li><a href="#" className="hover:text-green-600">About</a></li>
-            <li><a href="#" className="hover:text-green-600">Team</a></li>
-              <li><a href="#" className="hover:text-green-600">Testimonials</a></li>
-            <li><a href="#" className="hover:text-green-600">Subscribe</a></li>
-            <li><a href="#" className="hover:text-green-600">Contact</a></li>
+            <li>
+              <a href="#services" className="hover:text-green-600">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#about" className="hover:text-green-600">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#team" className="hover:text-green-600">
+                Team
+              </a>
+            </li>
+            <li>
+              <a href="#testimonials" className="hover:text-green-600">
+                Testimonials
+              </a>
+            </li>
+            <li>
+              <a href="#subscribe" className="hover:text-green-600">
+                Subscribe
+              </a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-green-600">
+                Contact
+              </a>
+            </li>
           </ul>
 
           {/* Mobile/Tablet Icons & Button */}
