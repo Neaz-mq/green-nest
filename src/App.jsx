@@ -18,10 +18,9 @@ export default function App() {
       {loading && <Loader setLoading={setLoading} />}
       {!loading && (
         <div>
-          <Top/>
+          <Top />
           <Navbar />
           <main>
-            {/* Sections will go here (Hero, About, Services, etc.) */}
             <Hero />
             <Landscaping />
             <About />
