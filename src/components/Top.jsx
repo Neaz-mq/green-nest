@@ -1,11 +1,9 @@
-// Top.jsx
 import { MapPin, Mail, Facebook, Twitter, Instagram } from "lucide-react";
 
 const Top = () => {
   return (
     <div className="w-full bg-green-50 text-green-900 text-sm">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-4 sm:px-6 md:px-8 py-4 md:py-6">
-        
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-4 sm:px-6 md:px-8 py-4 md:py-6">       
         {/* Left side: Address & Email */}
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 items-center text-center sm:text-left">
           <div className="flex items-center gap-2">
