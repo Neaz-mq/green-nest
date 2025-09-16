@@ -54,7 +54,7 @@ const SimpleChat = () => {
         <div className="fixed bottom-20 left-6 w-80 bg-white border rounded-xl shadow-lg flex flex-col overflow-hidden z-50">
           {/* Header */}
           <div className="bg-green-600 text-white p-3 font-bold flex justify-between items-center">
-            Chat Bot
+           Green Nest
             <button
               onClick={() => setOpen(false)}
               className="text-white hover:text-gray-200 font-bold"
