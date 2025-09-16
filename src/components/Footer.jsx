@@ -13,7 +13,7 @@ import { IoIosMail } from "react-icons/io";
 const Footer = () => {
   return (
     <footer
-      className="relative bg-[#1a4d2e] text-white pt-32 pb-8 overflow-hidden"
+      className="relative bg-[#1a4d2e] text-white pt-32 mt-20 pb-8 overflow-hidden"
       style={{
         backgroundImage:
           "url(https://res.cloudinary.com/dxohwanal/image/upload/v1758001181/Mask-group-6.09ea74ec_qmffrl.png)",
