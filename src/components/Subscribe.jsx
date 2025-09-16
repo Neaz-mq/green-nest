@@ -1,19 +1,80 @@
-import React from "react";
-import { Check } from "lucide-react"; // for check icons
+import React, { useEffect, useRef } from "react";
+import { Check } from "lucide-react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Subscribe = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Left image animation
+      gsap.from(".subscribe-left", {
+        opacity: 0,
+        x: -50,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".subscribe-left",
+          start: "top 90%",
+        },
+      });
+
+      // Right content animation
+      gsap.from(".subscribe-right", {
+        opacity: 0,
+        x: 50,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".subscribe-right",
+          start: "top 90%",
+        },
+      });
+
+      // Feature blocks stagger
+      gsap.from(".feature-block", {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".feature-block",
+          start: "top 85%",
+        },
+      });
+
+      // Subscription box
+      gsap.from(".subscribe-box", {
+        opacity: 0,
+        y: 20,
+        scale: 0.98,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".subscribe-box",
+          start: "top 90%",
+        },
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div id="subscribe" className="md:py-28 py-10 text-gray-800 scroll-smooth">
+    <div id="subscribe" className="md:py-28 py-10 text-gray-800 scroll-smooth" ref={containerRef}>
       {/* About Us Section */}
-      <div className="grid grid-cols-1 2xl:grid-cols-2 xl:grid-cols-2  ">
+      <div className="grid grid-cols-1 2xl:grid-cols-2 xl:grid-cols-2">
         {/* Left Image with dark overlay */}
-        <div className="relative h-[500px]">
+        <div className="relative h-[500px] subscribe-left">
           <img
             src="https://res.cloudinary.com/dxohwanal/image/upload/v1757929839/person-cutthetree.20e1f748_godhgf.jpg"
             alt="Person gardening"
             className="w-full h-full object-cover"
           />
-          {/* Black overlay */}
           <div className="absolute inset-0 bg-black opacity-40"></div>
 
           {/* Logo Overlay */}
@@ -29,7 +90,7 @@ const Subscribe = () => {
 
         {/* Right Green Content */}
         <div
-          className="bg-[#2f8d46] text-white relative flex flex-col justify-center px-8 md:px-16 py-12"
+          className="bg-[#2f8d46] text-white relative flex flex-col justify-center px-8 md:px-16 py-12 subscribe-right"
           style={{
             backgroundImage:
               "url('https://res.cloudinary.com/dxohwanal/image/upload/v1757929984/Screenshot_2025-09-15_151519_lgirx0.png')",
@@ -53,7 +114,7 @@ const Subscribe = () => {
             {/* Features Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {/* Feature Block 1 */}
-              <div>
+              <div className="feature-block">
                 <div className="flex items-center space-x-3 mb-3">
                   <div className="bg-white text-green-700 font-bold rounded-full w-10 h-10 flex items-center justify-center">
                     01
@@ -82,7 +143,7 @@ const Subscribe = () => {
               </div>
 
               {/* Feature Block 2 */}
-              <div>
+              <div className="feature-block">
                 <div className="flex items-center space-x-3 mb-3">
                   <div className="bg-white text-green-700 font-bold rounded-full w-10 h-10 flex items-center justify-center">
                     02
@@ -115,7 +176,7 @@ const Subscribe = () => {
       </div>
 
       {/* Subscription Box */}
-      <div className="bg-white shadow-lg rounded-lg max-w-3xl mx-auto 2xl:-mt-10 xl:-mt-6 -mt-4  relative z-20 p-8 flex flex-col md:flex-row items-center justify-between space-y-5 ">
+      <div className="bg-white shadow-lg rounded-lg max-w-3xl mx-auto 2xl:-mt-10 xl:-mt-6 -mt-4 relative z-20 p-8 flex flex-col md:flex-row items-center justify-between space-y-5 subscribe-box">
         <p className="text-gray-800 font-medium">
           Get weekly gardening tips and exclusive offers straight to your inbox!
         </p>

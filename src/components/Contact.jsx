@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import {
   FaMapMarkerAlt,
   FaPhoneAlt,
@@ -8,9 +8,14 @@ import {
 import emailjs from "emailjs-com";
 import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const formRef = useRef();
+  const containerRef = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -25,15 +30,15 @@ const Contact = () => {
       .then(
         () => {
           toast.success("Message sent successfully!", {
-            position: "top-center", // center horizontally at top
+            position: "top-center",
             autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "colored", // modern colored toast
-            transition: Slide, // smooth slide animation
+            theme: "colored",
+            transition: Slide,
           });
           formRef.current.reset();
         },
@@ -53,10 +58,44 @@ const Contact = () => {
       );
   };
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Animate left info box
+      gsap.from(".contact-info", {
+        opacity: 0,
+        x: -50,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact-info",
+          start: "top 80%",
+        },
+      });
+
+      // Animate contact form
+      gsap.from(".contact-form", {
+        opacity: 0,
+        x: 50,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact-form",
+          start: "top 80%",
+        },
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div  id="contact" className="flex flex-col lg:flex-row justify-center items-center py-8 px-4 md:px-8 lg:px-16 scroll-smooth">
+    <div
+      id="contact"
+      className="flex flex-col lg:flex-row justify-center items-center py-8 px-4 md:px-8 lg:px-16 scroll-smooth"
+      ref={containerRef}
+    >
       {/* Left Info */}
-      <div className="flex-1 p-6 md:p-10 lg:p-16 flex flex-col justify-center items-center lg:items-start max-w-lg">
+      <div className="flex-1 p-6 md:p-10 lg:p-16 flex flex-col justify-center items-center lg:items-start max-w-lg contact-info">
         <div className="text-left w-full mb-8">
           <p className="text-sm text-[#97d498] uppercase tracking-widest mb-1">
             Get in touch
@@ -95,11 +134,14 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <div className="flex-1 p-6 md:p-10 lg:p-16 bg-white rounded-xl shadow-lg mt-8 lg:mt-0 max-w-xl">
+      <div className="flex-1 p-6 md:p-10 lg:p-16 bg-white rounded-xl shadow-lg mt-8 lg:mt-0 max-w-xl contact-form">
         <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-6">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1">
-              <label htmlFor="fullName" className="text-sm text-gray-600 mb-1 block">
+              <label
+                htmlFor="fullName"
+                className="text-sm text-gray-600 mb-1 block"
+              >
                 Name <span className="text-gray-400 text-xs">[required]</span>
               </label>
               <input
@@ -112,7 +154,10 @@ const Contact = () => {
               />
             </div>
             <div className="flex-1">
-              <label htmlFor="phoneNumber" className="text-sm text-gray-600 mb-1 block">
+              <label
+                htmlFor="phoneNumber"
+                className="text-sm text-gray-600 mb-1 block"
+              >
                 Phone <span className="text-gray-400 text-xs">[optional]</span>
               </label>
               <input
@@ -127,7 +172,10 @@ const Contact = () => {
 
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1">
-              <label htmlFor="email" className="text-sm text-gray-600 mb-1 block">
+              <label
+                htmlFor="email"
+                className="text-sm text-gray-600 mb-1 block"
+              >
                 Email <span className="text-gray-400 text-xs">[required]</span>
               </label>
               <input
@@ -140,7 +188,10 @@ const Contact = () => {
               />
             </div>
             <div className="flex-1">
-              <label htmlFor="services" className="text-sm text-gray-600 mb-1 block">
+              <label
+                htmlFor="services"
+                className="text-sm text-gray-600 mb-1 block"
+              >
                 Services <span className="text-gray-400 text-xs">[required]</span>
               </label>
               <div className="relative">
@@ -161,7 +212,10 @@ const Contact = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="text-sm text-gray-600 mb-1 block">
+            <label
+              htmlFor="message"
+              className="text-sm text-gray-600 mb-1 block"
+            >
               Your message*
             </label>
             <textarea
@@ -188,7 +242,7 @@ const Contact = () => {
 
       {/* Centered Toastify container */}
       <ToastContainer
-        position="top-center" // center horizontally at top
+        position="top-center"
         autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
