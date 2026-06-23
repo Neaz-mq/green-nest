@@ -55,8 +55,8 @@ const Footer = () => {
           <div className="bg-[#e7f5ec] rounded-xl flex items-start space-x-4 py-4 px-3 sm:py-6 sm:px-4">
             <FaPhoneAlt className="text-[#3b823e] text-xl sm:text-2xl mt-1" />
             <div className="text-[#1a4d2e] text-sm sm:text-base">
-              <p className="font-semibold">0130 3660 481</p>
-              <p>0178 5286 936</p>
+              <p className="font-semibold">044 256 3621</p>
+              <p>033 365 2244</p>
             </div>
           </div>
 
@@ -65,9 +65,9 @@ const Footer = () => {
             <FaEnvelope className="flex-shrink-0 text-[#3b823e] text-xl sm:text-2xl" />
             <div className="text-[#1a4d2e] text-sm md:text-base leading-snug overflow-hidden">
               <p className="font-semibold truncate md:whitespace-normal">
-                neazmorshed666@gmail.com
+                test@gmail.com
               </p>
-              <p className="truncate md:whitespace-normal">neazmorshed.cse@gmail.com</p>
+              <p className="truncate md:whitespace-normal">test@gmail.com</p>
             </div>
           </div>
         </div>

@@ -16,7 +16,7 @@ const Top = () => {
               href="mailto:info@website.com"
               className="hover:underline text-xs sm:text-sm break-all sm:break-normal"
             >
-              neazmorshed666@gmail.com
+              test@gmail.com
             </a>
           </div>
         </div>
