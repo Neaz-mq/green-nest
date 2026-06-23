@@ -119,14 +119,14 @@ const Contact = () => {
               <FaPhoneAlt className="text-2xl md:text-3xl bg-white bg-opacity-20 rounded-full p-2" />
               <div>
                 <h3 className="font-semibold text-lg">Our Phone</h3>
-                <p className="text-sm opacity-90">+880 130 3660481</p>
+                <p className="text-sm opacity-90">+880 666 425 41</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <FaEnvelope className="text-2xl md:text-3xl bg-white bg-opacity-20 rounded-full p-2" />
               <div>
                 <h3 className="font-semibold text-lg">Our Email</h3>
-                <p className="text-sm opacity-90">neazmorshed.cse@gmail.com</p>
+                <p className="text-sm opacity-90">test@gmail.com</p>
               </div>
             </div>
           </div>
